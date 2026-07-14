@@ -6,7 +6,7 @@ const employmentHistory = [
       title: 'Freelance Web Developer',
       time: '2018 - 2021',
       description:
-        'Delivered high-quality services, managed end-to-end web development projects for clients from all over the world.',
+        'Delivered high-quality services, managed end-to-end web development projects for clients from all over the world online freelance marketplaces (mostly Fiverr).',
     },
     {
       title: 'Full Stack Developer',
@@ -27,17 +27,17 @@ const employmentHistory = [
       },
       time: '2022 - 2023',
       description:
-        'Мigrated an old node.js + React codebase to a modern stack (TypeScript, Next.js, tRPC, Tailwind CSS). Rapidly delivered new features to both backend and frontend. Convinced the team to use Tailwind CSS.',
+        'Мigrated an old node.js + React codebase to a modern stack (TypeScript, Next.js, tRPC, Tailwind CSS). Rapidly delivered new features to both backend and frontend. Convinced the team to switch to Tailwind.',
     },
     {
       title: 'Senior Full Stack Developer',
       company: {
         name: 'Finally Founding',
-        description: 'Dev Agency working with US-based startups',
+        description: 'Dev Agency developing applications powered by AI',
       },
       time: '2023 - Present',
       description:
-        'Delivered multiple unique projects. Improved app performance by removing heavy dependencies. Worked with React, Next.js, Tailwind, React Native.',
+        'Delivered multiple unique projects. Successfully integrated AI into existing projects. In three years removed more code than added. Worked with React, Next.js, Convex, Tantack Start, Tailwind, React Native. Became an expert in building good ai-powered user experiences.',
     },
   ],
   skills = {
@@ -49,58 +49,40 @@ const employmentHistory = [
     'Frontend Development': [
       { name: 'React', icon: 'logos:react' },
       { name: 'Vue', icon: 'logos:vue' },
-      { name: 'Svelte', icon: 'logos:svelte-icon' },
+      { name: 'Svelte/Kit', icon: 'logos:svelte-icon' },
       { name: 'Solid', icon: 'logos:solidjs-icon' },
-      { name: 'HTMX' },
-      { name: 'Alpine.js', icon: 'devicon:alpinejs' },
+      { name: 'HTMX', icon: 'devicon:htmx' },
       { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+      { name: 'Tanstack Start / Query', icon: 'simple-icons:tanstack' },
       { name: 'Next.js', icon: 'logos:nextjs-icon' },
-      { name: 'Remix', icon: 'logos:remix-icon' },
-      { name: 'SvelteKit', icon: 'logos:svelte-icon' },
       { name: 'Astro', icon: 'simple-icons:astro' },
-      { name: 'React Native', icon: 'logos:react' },
-      { name: 'Expo', icon: 'logos:expo-icon' },
+      { name: 'React Native & Expo', icon: 'logos:react' },
       { name: 'Electron', icon: 'logos:electron' },
       { name: 'Tauri', icon: 'logos:tauri' },
     ],
     'JS/TS ecosystem': [
-      { name: 'Fastify', icon: 'logos:fastify-icon' },
       { name: 'Hono', icon: 'logos:hono' },
-      { name: 'Elysia' },
-      { name: 'Prisma', icon: 'logos:prisma' },
-      { name: 'Drizzle' },
+      { name: 'AI SDK', icon: 'devicon:vercel' },
+      { name: 'Drizzle', icon: 'material-icon-theme:drizzle' },
       { name: 'tRPC', icon: 'simple-icons:trpc' },
       { name: 'Cloudflare Workers', icon: 'devicon:cloudflareworkers' },
-    ],
-    'Other Technologies': [
-      { name: 'Docker', icon: 'logos:docker-icon' },
-      { name: 'Git', icon: 'logos:git-icon' },
-      { name: 'GraphQL', icon: 'logos:graphql' },
-      { name: 'SQL', icon: 'mdi:database' },
-      { name: 'WebSockets' },
-      { name: 'REDIS', icon: 'logos:redis' },
-      { name: 'Linux', icon: 'logos:linux-tux' },
+      { name: 'Convex', icon: 'simple-icons:convex' },
     ],
   },
   openSourceProjects: {
     github: string;
-    name: string;
     description: string;
-    link?: string;
   }[] = [
     {
-      name: 'Ronix',
-      github: 'https://github.com/ronanru/ronix',
+      description: 'In browser OS simpulator',
+      github: 'https://github.com/matrv/os',
+    },
+    {
+      github: 'https://github.com/matrv/ronix',
       description: 'Linux music player and library manager',
     },
     {
-      name: 'My FAQ Page',
-      github: 'https://github.com/ronanru/myfaq.page',
-      description: 'An FAQ Page generator web app',
-    },
-    {
-      name: 'UnoPack',
-      github: 'https://github.com/ronanru/unopack',
+      github: 'https://github.com/matrv/unopack',
       description: 'Minecraft modpack bundler',
     },
   ];
@@ -119,20 +101,20 @@ const employmentHistory = [
       </div>
       <div class="flex gap-4">
         <a
-          href="https://ronanru.com"
+          href="https://matvey.dev"
           class="flex items-center gap-1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon pack="mdi" name="link" class="h-5 w-5" /> ronanru.com
+          <Icon pack="mdi" name="link" class="h-5 w-5" /> matvey.dev
         </a>
         <a
-          href="https://github.com/ronanru"
+          href="https://github.com/matrv"
           class="flex items-center gap-1"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon pack="mdi" name="github" class="h-5 w-5" /> github.com/ronanru
+          <Icon pack="mdi" name="github" class="h-5 w-5" /> github.com/matrv
         </a>
         <a href="mailto:orlition@gmail.com" class="flex items-center gap-1">
           <Icon pack="mdi" name="email" class="h-5 w-5" /> orlition@gmail.com
@@ -178,60 +160,65 @@ const employmentHistory = [
   </section>
   <section class="space-y-2 p-4">
     <h2 class="font-heading text-2xl font-bold">Open-Source Projects</h2>
-    {
-      openSourceProjects.map(({ description, link, name, github }) => (
-        <p class="flex gap-1">
-          <span class="font-bold">{name}</span>
-          <span class="flex">
-            (
-            {link && (
-              <span class="mr-1">
-                <a
-                  class="underline"
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Site
-                </a>
-                ,
-              </span>
-            )}
-            <a
-              class="underline"
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            ) -
-          </span>
-          <span class="italic">{description}</span>
-        </p>
-      ))
-    }
-    <br />
     <p>
-      I'm a frequent open-source contributor, I contributed to
-      <a
+      I'm a frequent open-source contributor. List of projects I've contributed
+      to includes <a
         class="underline"
         href="https://github.com/t3-oss/create-t3-app"
         target="_blank"
         rel="noopener noreferrer">create-t3-app</a
-      >,
-      <a
+      >, <a
+        class="underline"
+        href="https://github.com/pop-os/shell"
+        target="_blank"
+        rel="noopener noreferrer">pop shell gnome extension</a
+      >, <a
+        class="underline"
+        href="https://getaurora.dev/en/contributors/"
+        target="_blank"
+        rel="noopener noreferrer">Aurora Linux</a
+      >, <a
         class="underline"
         href="https://github.com/vercel/next.js"
         target="_blank"
-        rel="noopener noreferrer">next.js</a
-      >,
-      <a
+        rel="noopener noreferrer">Next.js</a
+      >, <a
+        class="underline"
+        href="https://github.com/anomalyco/opencode"
+        target="_blank"
+        rel="noopener noreferrer">OpenCode</a
+      >. I'm a member in the <a
+        class="underline"
+        href="https://e18e.dev"
+        target="_blank"
+        rel="noopener noreferrer">e18e</a
+      > (Ecosystem Performance) community, I helped write <a
         class="underline"
         href="https://github.com/es-tooling/module-replacements-codemods"
         target="_blank"
-        rel="noopener noreferrer">module-replacements-codemods</a
-      >, and multiple other open-source projects.
+        rel="noopener noreferrer">codemods</a
+      > to cleanup the npm ecosystem.
+    </p>
+    <br />
+    <p>
+      You can also check out my solo projects I made for fun: <ul
+        class="list-inside list-disc"
+      >
+        {
+          openSourceProjects.map(({ description, github }, i) => (
+            <li>
+              <a
+                class="underline"
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {description}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </p>
   </section>
   <div

@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'Cascadia Code', 'Fira Code', 'Fira Mono', 'Ubuntu Mono', ui-monospace, 'Courier New', monospace;
+  --font-sans: 'Public Sans Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-heading: 'League Spartan Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
